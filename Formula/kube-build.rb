@@ -5,20 +5,20 @@
 class KubeBuild < Formula
   desc "Build (and optionally push) container images with the in-cluster buildkitd, from outside the cluster."
   homepage "https://github.com/agrospai/kube-build"
-  version "0.0.2"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AgrospAI/kube-build/releases/download/v0.0.2/kube-build_0.0.2_darwin_amd64.tar.gz"
-      sha256 "821819e18da92df9648cbec0bec9a775d03d453de686c42bb6c53437ca0d6232"
+      url "https://github.com/AgrospAI/kube-build/releases/download/v1.0.0/kube-build_1.0.0_darwin_amd64.tar.gz"
+      sha256 "c98889a5018e5ce8950d93f5353d1bebf7d92143c15101a0cee31fa6d29f8dfb"
 
       define_method(:install) do
         bin.install "kube-build"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AgrospAI/kube-build/releases/download/v0.0.2/kube-build_0.0.2_darwin_arm64.tar.gz"
-      sha256 "b3823238317394254d7f42e6128c9b38cf4c9aa61cd152147d7f0f7a8d76fc88"
+      url "https://github.com/AgrospAI/kube-build/releases/download/v1.0.0/kube-build_1.0.0_darwin_arm64.tar.gz"
+      sha256 "c70d58e8a26dff0de278efdd1cd41e7e338833cd7fcb29eed9b8cc74cfedde75"
 
       define_method(:install) do
         bin.install "kube-build"
@@ -28,15 +28,15 @@ class KubeBuild < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AgrospAI/kube-build/releases/download/v0.0.2/kube-build_0.0.2_linux_amd64.tar.gz"
-      sha256 "11ccb799e893d1dc2000dcb863cf9b8ef92085447c9294a77d5eb9f01670e914"
+      url "https://github.com/AgrospAI/kube-build/releases/download/v1.0.0/kube-build_1.0.0_linux_amd64.tar.gz"
+      sha256 "fd7e922fe71c1ffcb478750624f855dd01142b20f54dd5430706511d17836895"
       define_method(:install) do
         bin.install "kube-build"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AgrospAI/kube-build/releases/download/v0.0.2/kube-build_0.0.2_linux_arm64.tar.gz"
-      sha256 "901be88803125f32eafdabec6bdb2cf0f2cfdefd5a2b8c2056b30a084dcf2d2c"
+      url "https://github.com/AgrospAI/kube-build/releases/download/v1.0.0/kube-build_1.0.0_linux_arm64.tar.gz"
+      sha256 "fd75227abbe603b8a72fef772177b612aa7035cf457c365480646d7d956211cb"
       define_method(:install) do
         bin.install "kube-build"
       end
